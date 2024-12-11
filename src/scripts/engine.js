@@ -32,6 +32,7 @@ function handleClick() {
     if (openCards.length<2) {
         this.classList.add("boxOpen")
         openCards.push(this)
+        this.onclick = ''
     }
 
     if (openCards.length==2) {
@@ -48,6 +49,8 @@ function cehckMath() {
     }else{
         openCards[0].classList.remove("boxOpen")
         openCards[1].classList.remove("boxOpen")
+        openCards[0].onclick = handleClick
+        openCards[1].onclick = handleClick
     }
     openCards=[]
 
